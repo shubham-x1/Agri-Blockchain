@@ -1,0 +1,19 @@
+{
+  "name": "agri-blockchain",
+  "version": "1.0.0",
+  "main": "index.js",
+"scripts": {
+  "start": "concurrently -k \"npm run server\" \"npm run client\"",
+  "server": "cd agri-backend && npm run dev",
+  "client": "cd agri-frontend && npm start",
+  "install-all": "npm install --prefix agri-backend && npm install --prefix agri-frontend",
+  "build": "cd agri-frontend && npm run build"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
