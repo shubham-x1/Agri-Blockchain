@@ -95,21 +95,23 @@ const FarmerDashboard: React.FC = () => {
   ];
 
   useEffect(() => {
-    const fetchCrops = async () => {
-      try {
-        const res = await fetch("http://localhost:5000/api/crop/");
-        if (!res.ok) {
-          throw new Error(`HTTP error! Status: ${res.status}`);
-        }
-        const data = await res.json();
-        setCrops(data.reverse()); // reverse to show first listed first
-      } catch (error) {
-        console.error("Fetch error:", error);
-        setCrops(dummyCrops); // fallback to dummy data
-      } finally {
-        setLoading(false);
-      }
-    };
+  
+        const fetchCrops = async () => {
+          try {
+            const response = await fetch('http://localhost:5000/api/crop/');
+            const data = await response.json();
+        
+            const mappedCrops = data.map((cropFromMongo: any) => ({
+              ...cropFromMongo,
+              id: cropFromMongo.blockchainId,   // 🔥 IMPORTANT
+            }));
+        
+            setCrops(mappedCrops);  // assuming you have setCrops
+          } catch (error) {
+            console.error('Error fetching crops:', error);
+          }
+        };
+        
     
     fetchCrops();
   }, []);

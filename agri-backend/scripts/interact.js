@@ -16,7 +16,7 @@ const TransportDeal = require("../models/TransportDeal");
 // Contract details
 const INFURA_URL = process.env.INFURA_URL;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
-const CONTRACT_ADDRESS = "0x0b62F3D15C2a0fda182A5b0A9Bd7fdd851920BA9";
+const CONTRACT_ADDRESS = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 const contractABI = require("../artifacts/contracts/trade.sol/Trade.json").abi;
 
 async function main() {

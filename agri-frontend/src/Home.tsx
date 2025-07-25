@@ -36,7 +36,7 @@ export default function Home() {
               Powering Agriculture Through Blockchain
             </Typography>
             <Typography variant="h6" color="text.secondary" mb={4}>
-              Ekosfera connects Farmers, Traders, and Transporters in a trustless, transparent system.
+              AgriChain connects Farmers, Traders, and Transporters in a trustless, transparent system.
             </Typography>
             <Box mt={3}>
               <Button
@@ -178,7 +178,7 @@ export default function Home() {
           </Box>
           <Divider sx={{ my: 4, bgcolor: "white" }} />
           <Typography variant="body2" textAlign="center">
-            © 2025 Ekosfera. All rights reserved.
+            © 2025 Agrichain. All rights reserved.
           </Typography>
         </Container>
       </Box>
